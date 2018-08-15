@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="binaryCounter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:binaryCounter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock x:Name="binaryCount" HorizontalAlignment="Left" Height="82" Margin="125,382,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="40" TextAlignment="Center" FocusVisualPrimaryBrush="White" SelectionHighlightColor="White"/>
+        <Button x:Name="add1" Content="add1" HorizontalAlignment="Left" Margin="1000,356,0,0" VerticalAlignment="Top" Height="86" Width="151" Click="AddOneToOutput" FontSize="50" FontFamily="Segoe UI"/>
+        <TextBlock x:Name="decimalCount" HorizontalAlignment="Left" Margin="575,382,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="318
+                   " FontSize="40" TextAlignment="Center" LineHeight="9" FontFamily="Segoe UI"/>
+        <TextBlock x:Name="binaryHeader" HorizontalAlignment="Left" Height="54" Margin="125,349,0,0" Text="Binary representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" TextAlignment="Center" TextDecorations="Underline" FontSize="24"/>
+        <TextBlock x:Name="decimalHeader" HorizontalAlignment="Left" Height="54" Margin="575,349,0,0" Text="Decimal representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="24" TextAlignment="Center" TextDecorations="Underline"/>
+        <TextBlock x:Name="message" HorizontalAlignment="Center" Height="208" Margin="0,165,0,0" VerticalAlignment="Top" Width="1184" FontSize="36" TextAlignment="Center"><Run Text="Here is a counter that may help you visualize and understand how"/><LineBreak/><Run Text=" counting in binary works. Hit the button as many times as you like. Enjoy."/></TextBlock>
+
+    </Grid>
+</Page>
