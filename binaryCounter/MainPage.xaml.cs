@@ -27,17 +27,119 @@ namespace binaryCounter
             this.InitializeComponent();
         }
 
-        int output = 0;                                                 // initializes the value of the output before the button is clicked.
+        int output = 0;                                                   // initializes the value of the output before the button is clicked
 
-        private void AddOneToOutput(object sender, RoutedEventArgs e)   //method that is called each time the MainPage.add1 button is clicked.
+
+        public void AddOneToOutput(object sender, RoutedEventArgs e)      // method that is called each time the MainPage.add1 button is clicked
         {
-            output = output + 1;                                        // increases the value of the output by 1 each time the button is clicked.
 
-            String decimalOutput = Convert.ToString(output, 10);        // converts current value of MainPage.output to decimal form as a string.
-            decimalCount.Text = decimalOutput;                          // displays decimal output string in the MainPage.decimalCount TextBlock.
+            int decimalInput = Convert.ToInt32(inputBox.Text);
 
-            String binaryOutput = Convert.ToString(output, 2);          // converts current value of MainPage.output to binary form as a string.
-            binaryCount.Text = binaryOutput;                            // displays binary output string in the MainPage.binaryCount TextBlock.
+            if (decimalInput >= 0 && decimalInput <= 16383)                // executed each time the add1 button is clicked if the value is 14 bits or less
+            {
+                output = output + 1;
+
+                String decimalOutput = Convert.ToString(output, 10);        // converts current value of MainPage.output to decimal form as a string
+                decimalCount.Text = decimalOutput;                          // displays decimal output string in the MainPage.decimalCount TextBlock
+                inputBox.Text = decimalCount.Text;                          // ensures that inputBox displays the same value as decimalCount
+
+                String binaryOutput = Convert.ToString(output, 2);          // converts current value of MainPage.output to binary form as a string
+                binaryCount.Text = binaryOutput;                            // displays binary output string in the MainPage.binaryCount TextBlock
+            }
+            else if (decimalInput < 0)                                      // clicking the add1 button with a negative input resets the value to zero
+            {
+                decimalInput = 0;
+                output = decimalInput;
+
+                String decimalOutput = Convert.ToString(decimalInput, 10);
+                decimalCount.Text = decimalOutput;
+
+
+                String binaryOutput = Convert.ToString(decimalInput, 2);
+                binaryCount.Text = binaryOutput;
+
+                inputBox.Text = decimalCount.Text;
+            }
+            else
+            {
+                //TODO make a congratulations message for reaching the limit of a 14 bit number.
+            }
+        }
+
+        public void ConvertClick(object sender, RoutedEventArgs e)          // event for clicking conversion button
+        {
+            try                                                             // succeeds if entered value is a 32 bit int
+            {
+                int decimalInput = Convert.ToInt32(inputBox.Text);          // converts input to int
+
+                if (decimalInput >= 0 && decimalInput <= 16383)             // route for 14 bit int input
+                {
+                    output = decimalInput;
+
+                    String decimalOutput = Convert.ToString(decimalInput, 10);
+                    decimalCount.Text = decimalOutput;
+
+
+                    String binaryOutput = Convert.ToString(decimalInput, 2);
+                    binaryCount.Text = binaryOutput;
+                }
+                else if (decimalInput < 0)                                      // route for negative int input
+                {
+                    decimalInput = 0;                                           // resets to zero
+                    output = decimalInput;
+
+                    String decimalOutput = Convert.ToString(decimalInput, 10);
+                    decimalCount.Text = decimalOutput;
+
+
+                    String binaryOutput = Convert.ToString(decimalInput, 2);
+                    binaryCount.Text = binaryOutput;
+
+                    inputBox.Text = decimalCount.Text;
+                }
+                else                                                            // route for int greater than 14 bit, less than 33 bit
+                {
+                    decimalInput = 16383;                                       // sets value to max 14 bit value
+                    output = decimalInput;
+
+                    String decimalOutput = Convert.ToString(decimalInput, 10);
+                    decimalCount.Text = decimalOutput;
+
+
+                    String binaryOutput = Convert.ToString(decimalInput, 2);
+                    binaryCount.Text = binaryOutput;
+
+                    inputBox.Text = decimalCount.Text;
+                }
+            }
+            catch (OverflowException)                                       // sets value to zero if input is greater than 32 bit
+            {
+                int decimalInput = 0;
+                output = decimalInput;
+
+                String decimalOutput = Convert.ToString(decimalInput, 10);
+                decimalCount.Text = decimalOutput;
+
+
+                String binaryOutput = Convert.ToString(decimalInput, 2);
+                binaryCount.Text = binaryOutput;
+
+                inputBox.Text = decimalCount.Text;
+            }
+            catch (FormatException)                                         // sets value to zero if input is string
+            {
+                int decimalInput = 0;
+                output = decimalInput;
+
+                String decimalOutput = Convert.ToString(decimalInput, 10);
+                decimalCount.Text = decimalOutput;
+
+
+                String binaryOutput = Convert.ToString(decimalInput, 2);
+                binaryCount.Text = binaryOutput;
+
+                inputBox.Text = decimalCount.Text;
+            }
         }
     }
 }
