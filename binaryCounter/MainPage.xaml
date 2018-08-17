@@ -9,18 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="binaryCount" HorizontalAlignment="Left" Height="82" Margin="113,264,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="40" TextAlignment="Center" FocusVisualPrimaryBrush="White" SelectionHighlightColor="White"/>
-        <Button x:Name="add1" Content="add1" HorizontalAlignment="Left" Margin="988,238,0,0" VerticalAlignment="Top" Height="86" Width="151" Click="AddOneToOutput" FontSize="50" FontFamily="Segoe UI"/>
-        <TextBlock x:Name="decimalCount" HorizontalAlignment="Left" Margin="563,264,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="318
+        <TextBlock x:Name="binaryCount" HorizontalAlignment="Left" Height="82" Margin="390,265,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="40" TextAlignment="Center" FocusVisualPrimaryBrush="White" SelectionHighlightColor="White"/>
+        <Button x:Name="add1" Content="add1" HorizontalAlignment="Left" Margin="1042,238,0,0" VerticalAlignment="Top" Height="86" Width="151" Click="AddOneToOutput" FontSize="50" FontFamily="Segoe UI"/>
+        <TextBlock x:Name="decimalCount" HorizontalAlignment="Left" Margin="727,265,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="318
                    " FontSize="40" TextAlignment="Center" LineHeight="9" FontFamily="Segoe UI"/>
-        <TextBlock x:Name="binaryHeader" HorizontalAlignment="Left" Height="54" Margin="113,231,0,0" Text="Binary representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" TextAlignment="Center" TextDecorations="Underline" FontSize="24"/>
-        <TextBlock x:Name="decimalHeader" HorizontalAlignment="Left" Height="54" Margin="563,231,0,0" Text="Decimal representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="24" TextAlignment="Center" TextDecorations="Underline"/>
+        <TextBlock x:Name="binaryHeader" HorizontalAlignment="Left" Height="54" Margin="390,232,0,0" Text="Binary representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" TextAlignment="Center" TextDecorations="Underline" FontSize="24"/>
+        <TextBlock x:Name="decimalHeader" HorizontalAlignment="Left" Height="54" Margin="727,232,0,0" Text="Decimal representation:" TextWrapping="Wrap" VerticalAlignment="Top" Width="318" FontSize="24" TextAlignment="Center" TextDecorations="Underline"/>
         <TextBlock x:Name="message" HorizontalAlignment="Left" Height="208" Margin="36,47,0,0" VerticalAlignment="Top" Width="1184" FontSize="36" TextAlignment="Center"><Run Text="Here is a counter that may help you visualize and understand how"/><LineBreak/><Run Text=" counting in binary works. Hit the button as many times as you like. Enjoy."/></TextBlock>
 
-        <Button x:Name="ConvertButton" Content="convert" HorizontalAlignment="Left" Margin="988,397,0,0" VerticalAlignment="Top" Click="ConvertClick" Height="86" Width="151" FontSize="36" FontWeight="Normal" FontStyle="Normal"/>
-        <TextBox x:Name="inputBox" HorizontalAlignment="Left" Margin="640,397,0,0" Text="0" VerticalAlignment="Top" Height="86" Width="174" FontSize="40" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="605,510,0,0" Text="Enter a number up to 16,383 in this box" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="248" FontSize="20" TextAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="980,510,0,0" Text="Click this button to convert the value." TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="171" FontSize="20" TextAlignment="Center"/>
+        <Button x:Name="ConvertButton" Content="convert" HorizontalAlignment="Left" Margin="1042,397,0,0" VerticalAlignment="Top" Click="ConvertClick" Height="86" Width="151" FontSize="36" FontWeight="Normal" FontStyle="Normal"/>
+        <TextBox x:Name="inputBox" HorizontalAlignment="Left" Margin="804,398,0,0" Text="0" VerticalAlignment="Top" Height="86" Width="174" FontSize="40" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="769,511,0,0" Text="Enter a number up to 16,383 in this box" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="248" FontSize="20" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1034,510,0,0" Text="Click this button to convert the value." TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="171" FontSize="20" TextAlignment="Center"/>
+        <TextBlock x:Name="hexidecimalCount" HorizontalAlignment="Left" Margin="36,265,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="318" FontSize="40" TextAlignment="Center"/>
+        <TextBlock x:Name="hexidecimalHeader" HorizontalAlignment="Left" Margin="36,232,0,0" Text="Hexidecimal Representation" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="318" FontSize="24" TextDecorations="Underline"/>
 
     </Grid>
 </Page>

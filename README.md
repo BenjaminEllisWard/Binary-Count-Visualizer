@@ -13,8 +13,10 @@ Open MainPage.xaml to view the controls.
 
 # suggestions for improvement
 
-- Make the binary text block display the number separated by nibblets.
-
-- Add a 'convert' button with a corresponding input field where you can type in a number, press convert, and it gives you the number in binary form. It would be cool if this functionality was synced with the add 1 button and operated on the same variable.
+- Make the binary text block display the number separated by nibbles.
 
 - Make it pretty.
+
+- Make the counter/converter function with negative numbers.
+
+- Make a congratulations message for reaching the limit of a 14 bit number when the add1 button is clicked and value is 16383.
