@@ -22,7 +22,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="769,511,0,0" Text="Enter a number up to 16,383 in this box" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="248" FontSize="20" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="1034,510,0,0" Text="Click this button to convert the value." TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="171" FontSize="20" TextAlignment="Center"/>
         <TextBlock x:Name="hexidecimalCount" HorizontalAlignment="Left" Margin="36,265,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="318" FontSize="40" TextAlignment="Center"/>
-        <TextBlock x:Name="hexidecimalHeader" HorizontalAlignment="Left" Margin="36,232,0,0" Text="Hexidecimal Representation" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="318" FontSize="24" TextDecorations="Underline"/>
+        <TextBlock x:Name="hexidecimalHeader" HorizontalAlignment="Left" Margin="36,232,0,0" Text="Hexadecimal Representation" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="318" FontSize="24" TextDecorations="Underline"/>
 
     </Grid>
 </Page>
